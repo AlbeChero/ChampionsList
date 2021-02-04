@@ -12,7 +12,7 @@ class BoxChampion extends React.Component {
        var image = 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + champName + '_0.jpg';
        return (
             <div className="boxChamp" key={champName}>
-                <Link to={`${champName.toLowerCase()}`}><div className="champName">{champName}: {lowerTitle}</div></Link>
+                <Link to={`${champName}`}><div className="champName">{champName}: {lowerTitle}</div></Link>
                 <img src={image} alt={champName}></img>
                 <div className="champTitle"></div>
             </div>

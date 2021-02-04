@@ -60,3 +60,34 @@ code {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
+.championContainer {
+  width: 100%;
+}
+
+.imgChampion {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+}
+
+.imgChampion img {
+  max-width: 100%;
+}
+
+.championTitles {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.championTitle {
+  font-size: 40px;
+}
+
+.championName {
+  font-size: 30px;
+}

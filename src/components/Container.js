@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from "./Header";
 import BoxChampion from './BoxChampion';
+import ChampionDetail from './ChampionDetail';
 import '../index.css'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
@@ -57,7 +58,8 @@ class Container extends React.Component {
 
         return(
             <Router>
-                <Route path="/" component={this.mainPageContent}/>
+                <Route path="/" exact component={this.mainPageContent}/>
+                <Route path="/:name" component={ChampionDetail} />
             </Router>
         );
     }
