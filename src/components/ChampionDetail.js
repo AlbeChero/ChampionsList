@@ -25,6 +25,9 @@ class ChampionDetail extends React.Component {
     } 
 
     render() {
+        console.log(this.state.championDetail);
+        const key = this.state.championDetail.map(detail => detail.key);
+        const passive = this.state.championDetail.map(detail => detail.passive);
         const skins = this.state.championDetail.map(detail => detail.skins);
         const spells = this.state.championDetail.map(detail => detail.spells)
         const image = 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + this.state.champName + '_0.jpg';
@@ -33,7 +36,7 @@ class ChampionDetail extends React.Component {
         return(
             <div className="championContainer">
                 <HeaderChampionDetail image={image} title={upTitle} subTitle={this.state.champName}/>
-                <SpellsChampionDetail spells={spells} />
+                <SpellsChampionDetail spells={spells} passive={passive} nameChamp={this.state.champName} champKey={key}/>
             </div>
         );
     }
