@@ -61,6 +61,13 @@ code {
   overflow: hidden;
 }
 
+.passiveSpellsVideoContainer {
+  overflow: auto;
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
 .championContainer {
   width: 100%;
 }
@@ -93,6 +100,7 @@ code {
 }
 
 .spellContainer {
+  width: 100%;
   clear: both;
   margin: 40px;
   padding: 10px;
@@ -100,6 +108,19 @@ code {
   position: relative;
   overflow: hidden;
   display: flex;
+  cursor: pointer;
+}
+
+.spellContainerGold {
+  width: 100%;
+  clear: both;
+  margin: 40px;
+  padding: 10px;
+  border: solid 2px gold;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  cursor: pointer;
 }
 
 .spellName {
@@ -136,4 +157,24 @@ code {
   width: 400px;
   max-width: 100%;
   position: relative;
+}
+
+.spellsAndPassive {
+  float: left;
+  width: 50%;
+}
+
+.videosContainer {
+  display: flex;
+  float: left;
+  width: 50%;
+}
+
+.videos {
+  max-width: 100px;
+  margin: auto;
+}
+
+.provaLink a, a:visited, a:hover, a.active{
+  color: inherit;
 }
