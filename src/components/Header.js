@@ -1,5 +1,6 @@
 import React from 'react';
 import '../index.css';
+import logo from '../images/lol-logo.png'
 
 class Header extends React.Component {
     constructor(props) {
@@ -14,12 +15,15 @@ class Header extends React.Component {
     render() {
         return (
             <div className="header">
-                    <form className="search">
-                        <input type="text" 
-                        value={this.props.search} 
-                        placeholder="Cerca campione.." 
-                        onChange={this.handleChangeSearch} />
-                    </form>
+                <div className="logo">
+                    <img src={logo}></img>
+                </div>
+                <form className="search">
+                    <input type="text" 
+                    value={this.props.search} 
+                    placeholder="Cerca campione.." 
+                    onChange={this.handleChangeSearch} />
+                </form>
             </div>
         );
     }

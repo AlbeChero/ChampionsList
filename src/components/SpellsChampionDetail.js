@@ -1,6 +1,7 @@
 import React from "react";
 import '../index.css';
 import SpellRow from './SpellRow';
+import SpellVideo from './SpellVideo';
 
 class SpellsChampionDetail extends React.Component {
     constructor(props) {
@@ -50,7 +51,7 @@ class SpellsChampionDetail extends React.Component {
             <div className="passiveSpellsVideoContainer">
                 <div className="spellsAndPassive">{this.generatePassiveAndSpellsList()}</div>
                 <div className="videosContainer">
-                    <div className="videos">Prova</div>
+                    <SpellVideo champKey={this.props.champKey} spellFocus={this.state.spellFocus}/>
                 </div>
             </div>
         )

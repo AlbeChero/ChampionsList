@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: cornflowerblue;
+  background-color: whitesmoke;
 }
 
 code {
@@ -15,12 +15,24 @@ code {
 
 .header {
   width: 100%;
-  height: 100px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.logo {
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo img{
+  width: 100%;
+  margin: 4px;
 }
 
 .search {
   width: 700px;
-  height: 100px;
+  height: 70px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -100,11 +112,11 @@ code {
 }
 
 .spellContainer {
-  width: 100%;
+  width: 90%;
   clear: both;
   margin: 40px;
   padding: 10px;
-  border: solid 2px black;
+  border: solid 2px rgb(160, 158, 158);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -112,11 +124,11 @@ code {
 }
 
 .spellContainerGold {
-  width: 100%;
+  width: 90%;
   clear: both;
   margin: 40px;
   padding: 10px;
-  border: solid 2px gold;
+  border: solid 2px black;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -138,25 +150,19 @@ code {
   width: 500px;
   margin-top: auto;
   margin-bottom: auto;
+  text-align: justify;
 }
 
 .spellImg {
-  margin-left: 20px;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  display: flex;
 }
 
-.videoContainer {
-  width: 600px;
-  margin-left: 40px;
-  margin-right: 40px;
-  align-items: center;
-}
-
-.videoContainer video{
-  width: 400px;
-  max-width: 100%;
-  position: relative;
+.spellImg img {
+  margin: auto;
+  display: block;
 }
 
 .spellsAndPassive {
@@ -171,8 +177,15 @@ code {
 }
 
 .videos {
-  max-width: 100px;
+  width: 500px;
   margin: auto;
+  display: flex;
+  border: solid 4px black;
+  padding: 2px;
+}
+
+.videos video {
+  max-width: 100%;
 }
 
 .provaLink a, a:visited, a:hover, a.active{
