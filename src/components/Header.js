@@ -18,12 +18,22 @@ class Header extends React.Component {
                 <div className="logo">
                     <img src={logo}></img>
                 </div>
-                <form className="search">
-                    <input type="text" 
-                    value={this.props.search} 
-                    placeholder="Cerca campione.." 
-                    onChange={this.handleChangeSearch} />
-                </form>
+                <div className="search">
+                    <form className="inputSearch">
+                        <input type="text" 
+                        value={this.props.search} 
+                        placeholder="Cerca campione.." 
+                        onChange={this.handleChangeSearch} />
+                    </form>
+                    <ul className="menuFilter">
+                        <li>Tutti</li>
+                        <li>Assassino</li>
+                        <li>Tank</li>
+                        <li>Supporto</li>
+                        <li>Tiratore</li>
+                        <li>Combattente</li>
+                    </ul>
+                </div>
             </div>
         );
     }

@@ -23,7 +23,7 @@ class SpellVideo extends React.Component {
 
         return(
             <div className="videos">
-                <video controls autoPlay src={urlVideo} type="video/web"/>
+                <video controls autoPlay src={urlVideo} type="video/web" poster="../images/logo-not-found.png" />
             </div>
         );
     }
