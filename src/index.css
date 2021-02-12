@@ -55,6 +55,7 @@ code {
   border-radius: 10px;
   border: solid 1px;
   background-color: whitesmoke;
+  margin-left: 5px;
 }
 
 .menuFilter {
@@ -72,9 +73,12 @@ code {
   padding: 10px;
   margin-top: auto;
   margin-bottom: auto;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
-.menuFilter li:nth-child(1) {
+.menuFilterUnderLine {
   text-decoration: underline;
 }
 

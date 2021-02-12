@@ -2,14 +2,37 @@ import React from 'react';
 import '../index.css';
 import logo from '../images/lol-logo.png'
 
+
+function ItemMenu(props) {
+    if(props.name === props.itemOn) {
+        return <li className="menuFilterUnderLine" onClick={props.changeFilterMenu}>{props.name}</li>;
+    } else {
+        return <li onClick={props.changeFilterMenu}>{props.name}</li>;
+    }
+}
+
 class Header extends React.Component {
     constructor(props) {
         super(props);
         this.handleChangeSearch = this.handleChangeSearch.bind(this);
+        this.changeFilterMenu = this.changeFilterMenu.bind(this);
+    }
+
+    changeFilterMenu(event) {
+        this.props.setItemMenu(event.target.innerHTML);
     }
 
     handleChangeSearch(event) {
         this.props.onChangeResearch(event.target.value);
+    }
+    
+    itemsMenu() {
+        var items = ['Tutti', 'Assassino', 'Tank', 'Supporto', 'Tiratore', 'Combattente'];
+        const result = [];
+        var i = 0;
+        items.forEach(item => result.push(<ItemMenu key={item} name={item} itemOn={this.props.itemMenu} 
+                        changeFilterMenu={this.changeFilterMenu}/>));
+        return result;
     }
 
     render() {
@@ -26,12 +49,7 @@ class Header extends React.Component {
                         onChange={this.handleChangeSearch} />
                     </form>
                     <ul className="menuFilter">
-                        <li>Tutti</li>
-                        <li>Assassino</li>
-                        <li>Tank</li>
-                        <li>Supporto</li>
-                        <li>Tiratore</li>
-                        <li>Combattente</li>
+                        {this.itemsMenu()}
                     </ul>
                 </div>
             </div>
