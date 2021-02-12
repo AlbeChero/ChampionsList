@@ -191,16 +191,17 @@ code {
 
 .spellImg {
   margin: auto;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-right: 10px;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   display: flex;
 }
 
 .spellImg img {
   margin: auto;
   display: block;
+  width: 100%;
 }
 
 .spellsAndPassive {
